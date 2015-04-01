@@ -1,0 +1,30 @@
+
+ul {
+	list-style-type: none;
+}
+
+ul li {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.box {
+	height: 80px;
+	width: 80px;
+	border: 2px solid black;
+	color: white;
+	background:black;
+}
+
+#title {
+	text-align: center;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+#starTrekIcon, #starWarsIcon {
+	display: none;
+}
