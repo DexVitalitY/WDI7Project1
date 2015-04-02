@@ -47,9 +47,9 @@ var computerWins = 0;
 var numTies = 0;
 
 function changePlayer() {
-	if (whoPlayer == "playerOne") {
+	if (whoPlayer === "playerOne") {
 		whoPlayer = "playerTwo";
-	} else if (whoPlayer == "playerTwo") {
+	} else if (whoPlayer === "playerTwo") {
 		whoPlayer = "playerOne";
 	}
 }
@@ -76,6 +76,7 @@ function changePlayer() {
 
 
 function resetTimer() {
+	clearInterval(foo);
 	timeLeft = 10;
 	$('#timeLeft').text("10");
 }
@@ -87,7 +88,7 @@ function timerReset() {
 
 //button variables for OnClick -- Simplify After Functionality
 $('#one').click(function() {
-	if (whoPlayer == "playerOne") {
+	if (whoPlayer === "playerOne") {
 		one.text('Star Wars');
 	} else {
 		one.text('Star Trek');
@@ -99,7 +100,7 @@ $('#one').click(function() {
 	checkWin();
 })
 $('#two').click(function() {
-	if (whoPlayer == "playerOne") {
+	if (whoPlayer === "playerOne") {
 		two.text('Star Wars');
 	} else {
 		two.text('Star Trek');
@@ -111,7 +112,7 @@ $('#two').click(function() {
 	checkWin();
 })
 $('#three').click(function() {
-	if (whoPlayer == "playerOne") {
+	if (whoPlayer === "playerOne") {
 		three.text('Star Wars');
 	} else {
 		three.text('Star Trek');
@@ -123,7 +124,7 @@ $('#three').click(function() {
 	checkWin();
 })
 $('#four').click(function() {
-	if (whoPlayer == "playerOne") {
+	if (whoPlayer === "playerOne") {
 		four.text('Star Wars');
 	} else {
 		four.text('Star Trek');
@@ -135,7 +136,7 @@ $('#four').click(function() {
 	checkWin();
 })
 $('#five').click(function() {
-	if (whoPlayer == "playerOne") {
+	if (whoPlayer === "playerOne") {
 		five.text('Star Wars');
 	} else {
 		five.text('Star Trek');
@@ -147,7 +148,7 @@ $('#five').click(function() {
 	checkWin();
 })
 $('#six').click(function() {
-	if (whoPlayer == "playerOne") {
+	if (whoPlayer === "playerOne") {
 		six.text('Star Wars');
 	} else {
 		six.text('Star Trek');
@@ -159,7 +160,7 @@ $('#six').click(function() {
 	checkWin();
 })
 $('#seven').click(function() {
-	if (whoPlayer == "playerOne") {
+	if (whoPlayer === "playerOne") {
 		seven.text('Star Wars');
 	} else {
 		seven.text('Star Trek');
@@ -171,7 +172,7 @@ $('#seven').click(function() {
 	checkWin();
 })
 $('#eight').click(function() {
-	if (whoPlayer == "playerOne") {
+	if (whoPlayer === "playerOne") {
 		eight.text('Star Wars');
 	} else {
 		eight.text('Star Trek');
@@ -183,7 +184,7 @@ $('#eight').click(function() {
 	checkWin();
 })
 $('#nine').click(function() {
-	if (whoPlayer == "playerOne") {
+	if (whoPlayer === "playerOne") {
 		nine.text('Star Wars');
 	} else {
 		nine.text('Star Trek');
@@ -196,8 +197,6 @@ $('#nine').click(function() {
 })
 //StarWars == X == playerOne
 //StarTrek == O == playerTwo
-var x = 0; //StarWars
-var o = 0; //StarTrek
 
 function getInput(){
 
@@ -231,7 +230,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 	console.log('WINNER');
 	whoPlayerTemp = (whoPlayer+'Wins');
 	console.log(whoPlayerTemp);
-		if (whoPlayerTemp == "playerOneWins") {
+		if (whoPlayerTemp === "playerOneWins") {
 		playerOneWins += 1;
 		} else {
 			playerTwoWins +=1;
@@ -239,7 +238,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 	} else if (fourV === fiveV && fourV === sixV && fiveV === sixV) {
 	console.log('WINNER');
 	whoPlayerTemp = (whoPlayer+'Wins');
-		if (whoPlayerTemp == "playerOneWins") {
+		if (whoPlayerTemp === "playerOneWins") {
 			playerOneWins += 1;
 		} else {
 			playerTwoWins +=1;
@@ -247,7 +246,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 	} else if (sevenV === eightV && sevenV === nineV && eightV === nineV) {
 	console.log('WINNER');
 	whoPlayerTemp = (whoPlayer+'Wins');
-		if (whoPlayerTemp == "playerOneWins") {
+		if (whoPlayerTemp === "playerOneWins") {
 			playerOneWins += 1;
 		} else {
 			playerTwoWins +=1;
@@ -256,7 +255,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 	} else if (oneV === fourV && oneV === sevenV && fourV === sevenV) {
 	console.log('WINNER');
 	whoPlayerTemp = (whoPlayer+'Wins');
-		if (whoPlayerTemp == "playerOneWins") {
+		if (whoPlayerTemp === "playerOneWins") {
 			playerOneWins += 1;
 		} else {
 			playerTwoWins +=1;
@@ -264,7 +263,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 	} else if (twoV === fiveV && twoV === eightV && fiveV === eightV) {
 	console.log('WINNER');
 	whoPlayerTemp = (whoPlayer+'Wins');
-		if (whoPlayerTemp == "playerOneWins") {
+		if (whoPlayerTemp === "playerOneWins") {
 			playerOneWins += 1;
 		} else {
 			playerTwoWins +=1;
@@ -272,7 +271,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 	} else if (threeV === sixV && threeV === nineV && sixV === nineV) {
 	console.log('WINNER');
 	whoPlayerTemp = (whoPlayer+'Wins');
-		if (whoPlayerTemp == "playerOneWins") {
+		if (whoPlayerTemp === "playerOneWins") {
 			playerOneWins += 1;
 		} else {
 			playerTwoWins +=1;
@@ -281,7 +280,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 	} else if (oneV === fiveV && oneV === nineV && fiveV === nineV) {
 	console.log('WINNER');
 	whoPlayerTemp = (whoPlayer+'Wins');
-		if (whoPlayerTemp == "playerOneWins") {
+		if (whoPlayerTemp === "playerOneWins") {
 			playerOneWins += 1;
 		} else {
 			playerTwoWins +=1;
@@ -289,7 +288,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 	} else if (threeV === fiveV && threeV === sevenV && fiveV === sevenV) {
 	console.log('WINNER');
 	whoPlayerTemp = (whoPlayer+'Wins');
-		if (whoPlayerTemp == "playerOneWins") {
+		if (whoPlayerTemp === "playerOneWins") {
 			playerOneWins += 1;
 		} else {
 			playerTwoWins +=1;
@@ -303,7 +302,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 
 function bestOfFiveWinner() {
 	if (playerOneWins === 5 || playerTwoWins === 5)
-		if (playerOneWins == 5) {
+		if (playerOneWins === 5) {
 			alert('PLAYER 1 WINS');
 			timerReset();   
 			resetGame();	
@@ -384,9 +383,24 @@ function resetGame() {
 // 					$('#timeLeft').text(timeLeft);
 // 				}, 1000);
 
+function resetOne () {
+	$('.box').unbind('mouseenter').one('mouseenter', function() {
+		if (timerOn != true) {
+		 foo = setInterval(function(){
+				if (timeLeft > 0) {	
+					timeLeft -= 1;
+					} else {
+					clearInterval(foo);
+					changePlayer();
+					}
+					$('#timeLeft').text(timeLeft);
+				}, 1000);
+		timerOn = true;
+		}
+	});
+}
 
-
-$('.box').mouseover(function() {
+$('.box').one('mouseenter', function() {
 	if (timerOn != true) {
 		 foo = setInterval(function(){
 				if (timeLeft > 0) {	
@@ -403,27 +417,28 @@ $('.box').mouseover(function() {
 
 
 
-function drawCheck() {
-//This checks if there is a draw.
-}
 
-function playerOneMove() {
-//This inititates playerOneMove
-}
+// function drawCheck() {
+// //This checks if there is a draw.
+// }
 
-function playerTwoMove() {
-//This initiates playerTwoMove
-}
+// function playerOneMove() {
+// //This inititates playerOneMove
+// }
 
-function timerCountDown() {
-//This is counts down to 0 before ending current players move.
-}
+// function playerTwoMove() {
+// //This initiates playerTwoMove
+// }
 
-function changeComputer() {
-//This changes the game mode to player vs Computer
-}
+// function timerCountDown() {
+// //This is counts down to 0 before ending current players move.
+// }
 
-function changePlayer() {
+// function changeComputer() {
+// //This changes the game mode to player vs Computer
+// }
 
-}
+// function changePlayer() {
+
+// }
 });
