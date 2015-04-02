@@ -185,9 +185,9 @@ $('#eight').click(function() {
 });
 $('#nine').click(function() {
 	if (whoPlayer === "playerOne") {
-		nine.text('Star Wars');
-	} else {
 		nine.text('Star Trek');
+	} else {
+		nine.text('Star Wars');
 	}
 	timerReset();
 	resetTimer();
@@ -303,12 +303,12 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 function bestOfFiveWinner() {
 	if (playerOneWins === 5 || playerTwoWins === 5) {
 		if (playerOneWins === 5) {
-			Window.alert('PLAYER 1 WINS');
+			alert('STAR TREK WINS');
 			timerReset();   
 			resetGame();	
 			resetBoardStarWars();
-		} else {
-			Window.alert('PLAYER 2 WINS');
+		} else if (playerTwoWins === 5) {
+			alert('STAR WARS WINS');
 			timerReset();
 			resetGame();
 			resetBoardStarTrek();	
@@ -329,6 +329,7 @@ $('#six').text('6');
 $('#seven').text('And');
 $('#eight').text('Prosper');
 $('#nine').text('-RIP Nimoy');
+resetOne();
 }
 
 function resetBoardStarWars() {
@@ -341,6 +342,7 @@ $('#six').text('6');
 $('#seven').text('Be');
 $('#eight').text('With');
 $('#nine').text('You');
+resetOne();
 }
 
 function resetBoard() {
@@ -357,6 +359,7 @@ $('#nine').text('9');
 
 
 $('#resetGame').click(function() {
+	resetOne();
 	timerReset(); 
 	resetTimer();
 	resetGame();
@@ -365,7 +368,7 @@ $('#resetGame').click(function() {
 
 function resetGame() {
 	clearInterval(foo);
-	timerLeft = 10;
+	timeLeft = 10;
 	$('#timeLeft').text("10");
 	playerOneWins = 0;
 	playerTwoWins = 0;
