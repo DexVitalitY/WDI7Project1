@@ -1,3 +1,4 @@
+$(document).ready(function() {
 // TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA
 var one = $('#one');
 var two = $('#two');
@@ -23,9 +24,8 @@ var whoPlayerTemp = 0;
 var playerOneWins = 0;
 var playerTwoWins = 0;
 var whoPlayer;
-// TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA
-$(document).ready(function(){
 
+// TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA
 var starWars = "Star Wars";
 var starTrek = "Star Trek";
 var timerOn;
@@ -34,7 +34,7 @@ var foo;
 var playerOne;
 var playerTwo;
 	whoPlayer = "playerOne"; //FIRST PLAYER ALWAYS PLAYER ONE AT START THEN CHANGES.
-var whoPlayerTemp;
+// var whoPlayerTemp;
 var currentPlayerTemp = '#'+ whoPlayer;
 var currentPlayer = $(currentPlayerTemp);
 
@@ -43,8 +43,8 @@ var timeLeft = 10;
 
 // var playerOneWins = 0;
 // var playerTwoWins = 0;
-var computerWins = 0; 
-var numTies = 0;
+// var computerWins = 0; 
+// var numTies = 0;
 
 function changePlayer() {
 	if (whoPlayer === "playerOne") {
@@ -86,6 +86,19 @@ function timerReset() {
 	timerOn = false; 
 }
 
+function checkTie() {
+	if ((oneV === starWars || oneV === starTrek) && 
+		(twoV === starWars || twoV === starTrek) &&
+		(threeV === starWars || threeV === starTrek) &&
+		(fourV === starWars || fourV === starTrek) &&
+		(fiveV === starWars || fiveV === starTrek) &&
+		(sixV === starWars || sixV === starTrek) &&
+		(sevenV === starWars || sevenV === starTrek) &&
+		(eightV === starWars || eightV === starTrek) &&
+		(nineV === starWars || nineV === starTrek)) {
+		console.log('THIS IS A TIE')
+		}
+	} 
 
 
 //button variables for OnClick -- Simplify After Functionality
@@ -187,9 +200,9 @@ $('#eight').one('click', function() {
 });
 $('#nine').one('click', function() {
 	if (whoPlayer === "playerOne") {
-		nine.text('Star Trek');
-	} else {
 		nine.text('Star Wars');
+	} else {
+		nine.text('Star Trek');
 	}
 	timerReset();
 	resetTimer();
@@ -298,6 +311,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 	}
 	$('#p2Score').text(playerTwoWins);
 	$('#p1Score').text(playerOneWins);
+	checkTie();
 	bestOfFiveWinner();
 } 
 
