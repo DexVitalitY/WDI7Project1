@@ -26,8 +26,8 @@ var whoPlayer;
 // TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA
 $(document).ready(function(){
 
-var starWars = $('#starWarsIcon');
-var starTrek = $('#starTrekIcon');
+var starWars = "Star Wars";
+var starTrek = "Star Trek";
 var timerOn;
 var foo; 
 
@@ -86,8 +86,10 @@ function timerReset() {
 	timerOn = false; 
 }
 
+
+
 //button variables for OnClick -- Simplify After Functionality
-$('#one').click(function() {
+$('#one').one('click', function() {
 	if (whoPlayer === "playerOne") {
 		one.text('Star Wars');
 	} else {
@@ -99,7 +101,7 @@ $('#one').click(function() {
 	getInput();
 	checkWin();
 });
-$('#two').click(function() {
+$('#two').one('click', function() {
 	if (whoPlayer === "playerOne") {
 		two.text('Star Wars');
 	} else {
@@ -111,7 +113,7 @@ $('#two').click(function() {
 	getInput();
 	checkWin();
 });
-$('#three').click(function() {
+$('#three').one('click', function() {
 	if (whoPlayer === "playerOne") {
 		three.text('Star Wars');
 	} else {
@@ -123,7 +125,7 @@ $('#three').click(function() {
 	getInput();
 	checkWin();
 });
-$('#four').click(function() {
+$('#four').one('click', function() {
 	if (whoPlayer === "playerOne") {
 		four.text('Star Wars');
 	} else {
@@ -135,7 +137,7 @@ $('#four').click(function() {
 	getInput();
 	checkWin();
 });
-$('#five').click(function() {
+$('#five').one('click', function() {
 	if (whoPlayer === "playerOne") {
 		five.text('Star Wars');
 	} else {
@@ -147,7 +149,7 @@ $('#five').click(function() {
 	getInput();
 	checkWin();
 });
-$('#six').click(function() {
+$('#six').one('click', function() {
 	if (whoPlayer === "playerOne") {
 		six.text('Star Wars');
 	} else {
@@ -159,7 +161,7 @@ $('#six').click(function() {
 	getInput();
 	checkWin();
 });
-$('#seven').click(function() {
+$('#seven').one('click', function() {
 	if (whoPlayer === "playerOne") {
 		seven.text('Star Wars');
 	} else {
@@ -171,7 +173,7 @@ $('#seven').click(function() {
 	getInput();
 	checkWin();
 });
-$('#eight').click(function() {
+$('#eight').one('click', function() {
 	if (whoPlayer === "playerOne") {
 		eight.text('Star Wars');
 	} else {
@@ -183,7 +185,7 @@ $('#eight').click(function() {
 	getInput();
 	checkWin();
 });
-$('#nine').click(function() {
+$('#nine').one('click', function() {
 	if (whoPlayer === "playerOne") {
 		nine.text('Star Trek');
 	} else {
