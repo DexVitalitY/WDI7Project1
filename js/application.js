@@ -301,7 +301,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 
 
 function bestOfFiveWinner() {
-	if (playerOneWins === 5 || playerTwoWins === 5)
+	if (playerOneWins === 5 || playerTwoWins === 5) {
 		if (playerOneWins === 5) {
 			Window.alert('PLAYER 1 WINS');
 			timerReset();   
@@ -313,6 +313,7 @@ function bestOfFiveWinner() {
 			resetGame();
 			resetBoardStarTrek();	
 		}
+	}
 }
 
 
@@ -364,7 +365,7 @@ $('#resetGame').click(function() {
 
 function resetGame() {
 	clearInterval(foo);
-	timer = 10;
+	timerLeft = 10;
 	$('#timeLeft').text("10");
 	playerOneWins = 0;
 	playerTwoWins = 0;
@@ -401,7 +402,7 @@ function resetOne () {
 }
 
 $('.box').one('mouseenter', function() {
-	if (timerOn != true) {
+	if (timerOn !== true) {
 		 foo = setInterval(function(){
 				if (timeLeft > 0) {	
 					timeLeft -= 1;
