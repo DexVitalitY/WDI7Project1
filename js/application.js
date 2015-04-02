@@ -98,7 +98,7 @@ $('#one').click(function() {
 	changePlayer();
 	getInput();
 	checkWin();
-})
+});
 $('#two').click(function() {
 	if (whoPlayer === "playerOne") {
 		two.text('Star Wars');
@@ -110,7 +110,7 @@ $('#two').click(function() {
 	changePlayer();
 	getInput();
 	checkWin();
-})
+});
 $('#three').click(function() {
 	if (whoPlayer === "playerOne") {
 		three.text('Star Wars');
@@ -122,7 +122,7 @@ $('#three').click(function() {
 	changePlayer();
 	getInput();
 	checkWin();
-})
+});
 $('#four').click(function() {
 	if (whoPlayer === "playerOne") {
 		four.text('Star Wars');
@@ -134,7 +134,7 @@ $('#four').click(function() {
 	changePlayer();
 	getInput();
 	checkWin();
-})
+});
 $('#five').click(function() {
 	if (whoPlayer === "playerOne") {
 		five.text('Star Wars');
@@ -146,7 +146,7 @@ $('#five').click(function() {
 	changePlayer();
 	getInput();
 	checkWin();
-})
+});
 $('#six').click(function() {
 	if (whoPlayer === "playerOne") {
 		six.text('Star Wars');
@@ -158,7 +158,7 @@ $('#six').click(function() {
 	changePlayer();
 	getInput();
 	checkWin();
-})
+});
 $('#seven').click(function() {
 	if (whoPlayer === "playerOne") {
 		seven.text('Star Wars');
@@ -170,7 +170,7 @@ $('#seven').click(function() {
 	changePlayer();
 	getInput();
 	checkWin();
-})
+});
 $('#eight').click(function() {
 	if (whoPlayer === "playerOne") {
 		eight.text('Star Wars');
@@ -182,7 +182,7 @@ $('#eight').click(function() {
 	changePlayer();
 	getInput();
 	checkWin();
-})
+});
 $('#nine').click(function() {
 	if (whoPlayer === "playerOne") {
 		nine.text('Star Wars');
@@ -194,7 +194,7 @@ $('#nine').click(function() {
 	changePlayer();
 	getInput();
 	checkWin();
-})
+});
 //StarWars == X == playerOne
 //StarTrek == O == playerTwo
 
@@ -303,12 +303,12 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 function bestOfFiveWinner() {
 	if (playerOneWins === 5 || playerTwoWins === 5)
 		if (playerOneWins === 5) {
-			alert('PLAYER 1 WINS');
+			Window.alert('PLAYER 1 WINS');
 			timerReset();   
 			resetGame();	
 			resetBoardStarWars();
 		} else {
-			alert('PLAYER 2 WINS');
+			Window.alert('PLAYER 2 WINS');
 			timerReset();
 			resetGame();
 			resetBoardStarTrek();	
@@ -385,7 +385,7 @@ function resetGame() {
 
 function resetOne () {
 	$('.box').unbind('mouseenter').one('mouseenter', function() {
-		if (timerOn != true) {
+		if (timerOn !== true) {
 		 foo = setInterval(function(){
 				if (timeLeft > 0) {	
 					timeLeft -= 1;
