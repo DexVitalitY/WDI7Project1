@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 // TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA
 var one = $('#one');
 var two = $('#two');
@@ -24,8 +24,8 @@ var whoPlayerTemp = 0;
 var playerOneWins = 0;
 var playerTwoWins = 0;
 var whoPlayer;
-// TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA
 
+// TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA TESTING AREA
 var starWars = "Star Wars";
 var starTrek = "Star Trek";
 var timerOn;
@@ -43,8 +43,8 @@ var timeLeft = 10;
 
 // var playerOneWins = 0;
 // var playerTwoWins = 0;
-var computerWins = 0; 
-var numTies = 0;
+// var computerWins = 0; 
+// var numTies = 0;
 
 function changePlayer() {
 	if (whoPlayer === "playerOne") {
@@ -86,6 +86,19 @@ function timerReset() {
 	timerOn = false; 
 }
 
+// function checkTie() {
+// 	if ((oneV === starWars || oneV === starTrek) && 
+// 		(twoV === starWars || twoV === starTrek) &&
+// 		(threeV === starWars || threeV === starTrek) &&
+// 		(fourV === starWars || fourV === starTrek) &&
+// 		(fiveV === starWars || fiveV === starTrek) &&
+// 		(sixV === starWars || sixV === starTrek) &&
+// 		(sevenV === starWars || sevenV === starTrek) &&
+// 		(eightV === starWars || eightV === starTrek) &&
+// 		(nineV === starWars || nineV === starTrek)) {
+// 		console.log('THIS IS A TIE')
+// 		}
+// 	} 
 
 
 //button variables for OnClick -- Simplify After Functionality
@@ -298,6 +311,7 @@ if (oneV === twoV && twoV === threeV && oneV === threeV) {
 	}
 	$('#p2Score').text(playerTwoWins);
 	$('#p1Score').text(playerOneWins);
+	// checkTie();
 	bestOfFiveWinner();
 } 
 
@@ -322,43 +336,42 @@ function bestOfFiveWinner() {
 //RESET FUNCTION! JUST NEEDS TO WORK, REFACTOR LATER
 
 function resetBoardStarTrek() {
-	$('#one').text('1');
-	$('#two').text('Live');
-	$('#three').text('3');
-	$('#four').text('4');
-	$('#five').text('Long');
-	$('#six').text('6');
-	$('#seven').text('And');
-	$('#eight').text('Prosper');
-	$('#nine').text('-RIP Nimoy');
-	resetOne();
-	}
+$('#one').text('1');
+$('#two').text('Live');
+$('#three').text('3');
+$('#four').text('4');
+$('#five').text('Long');
+$('#six').text('6');
+$('#seven').text('And');
+$('#eight').text('Prosper');
+$('#nine').text('-RIP Nimoy');
+resetOne();
+}
 
 function resetBoardStarWars() {
-	$('#one').text('1');
-	$('#two').text('May');
-	$('#three').text('3');
-	$('#four').text('The');
-	$('#five').text('Force');
-	$('#six').text('6');
-	$('#seven').text('Be');
-	$('#eight').text('With');
-	$('#nine').text('You');
-	resetOne();
-	}
+$('#one').text('1');
+$('#two').text('May');
+$('#three').text('3');
+$('#four').text('The');
+$('#five').text('Force');
+$('#six').text('6');
+$('#seven').text('Be');
+$('#eight').text('With');
+$('#nine').text('You');
+resetOne();
+}
 
 function resetBoard() {
-	$('#one').text('1');
-	$('#two').text('2');
-	$('#three').text('3');
-	$('#four').text('4');
-	$('#five').text('5');
-	$('#six').text('6');
-	$('#seven').text('7');
-	$('#eight').text('8');
-	$('#nine').text('9');
-	resetOne();
-	}
+$('#one').text('1');
+$('#two').text('2');
+$('#three').text('3');
+$('#four').text('4');
+$('#five').text('5');
+$('#six').text('6');
+$('#seven').text('7');
+$('#eight').text('8');
+$('#nine').text('9');
+}
 
 
 $('#resetGame').click(function() {
@@ -391,7 +404,7 @@ function resetGame() {
 // 				}, 1000);
 
 function resetOne () {
-	$('.box').unbind('click').one('click', function() {
+	$('.box').unbind('mouseenter').one('mouseenter', function() {
 		if (timerOn !== true) {
 		 foo = setInterval(function(){
 				if (timeLeft > 0) {	
